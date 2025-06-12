@@ -1,0 +1,12 @@
+parameters:
+    level: 8
+    paths:
+        - src
+        - tests
+    excludePaths:
+        - tests/fixtures/*
+    tmpDir: %currentWorkingDirectory%/.phpstan
+    treatPhpDocTypesAsCertain: false
+    ignoreErrors:
+        # Ignore missing type hints
+        - identifier: missingType.iterableValue
