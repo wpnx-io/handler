@@ -5,10 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [1.0.0] - 2025-06-14
 
 ### Added
-- Initial implementation of wpnx/handler package
+- Initial stable release of wpnx/handler package
 - Core `Handler` class for WordPress request processing
 - Processor chain architecture for extensible request handling
 - `Configuration` class with dot notation support and validation
@@ -28,15 +28,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `Environment` class for platform detection (Lambda, standard)
 - WordPress Multisite support with URL rewriting
 - Static file serving with MIME type detection
-- Directory trailing slash enforcement with 301 redirects
-- Comprehensive test suite with full coverage
+- Directory trailing slash enforcement with 307 redirects
+- Comprehensive test suite with 100% code coverage
 - PSR-12 code style compliance
 - PHPStan level 5 static analysis
-
-### Changed
-- Handler now returns file path string for global scope execution instead of executing WordPress directly
-- Multisite replacement pattern updated to include `/wp` prefix (e.g., `/wp$1` instead of `$1`)
-- Simplified architecture removing intermediate RequestHandler and RequestProcessor classes
+- PHP 8.0+ support with strict typing
 
 ### Security
 - Protection against directory traversal attacks
@@ -45,8 +41,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Configurable blocked patterns for sensitive files
 
 ### Developer Experience
-- Modern PHP 8.0+ with strict typing
+- Simple API - just 3 lines of code to get started
 - Interface-based design for extensibility
 - Comprehensive PHPDoc documentation
 - Example files for common use cases
 - Composer scripts for testing and code quality
+- GitHub Actions CI/CD pipeline
